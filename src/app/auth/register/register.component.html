@@ -1,0 +1,66 @@
+<section class="vh-50  ">
+    <!--style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');"-->
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3 py-5">
+      <div class="container h-100 mt-5">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-7 col-md-3 col-lg-2 col-xl-6">
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body p-5">
+                <h2 class="text-uppercase text-center mb-5">Sign Up</h2>
+  
+                <form [formGroup]='login2' (submit)="getData()">
+  
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example1cg">Your Name</label>
+                    <input type="text" id="form3Example1cg" class="form-control form-control-lg" [class.is-invalid]="vname && vname.invalid && vname.dirty"[class.is-valid]= "vname && vname.valid" formControlName="name">
+                    <span  *ngIf="vname && vname.invalid && vname.touched" style="color:red">
+                      Enter Your Name</span>
+                    
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example3cg">Your Email</label>
+                    <input type="email" id="form3Example3cg" class="form-control form-control-lg" [class.is-invalid]="ema && ema.invalid && ema.dirty"[class.is-valid]= "ema && ema.valid" formControlName="email">
+                    <span  *ngIf="ema && ema.invalid && ema.touched" style="color:red">
+                      Enter Valid Email</span>
+                    
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example4cg">Password</label>
+                    <input type="password" id="form3Example4cg" class="form-control form-control-lg"  [class.is-invalid]="pwd1 && pwd1.invalid && pwd1.dirty"[class.is-valid]= "pwd1 && pwd1.valid"formControlName="password">
+                    <span  *ngIf="pwd1 && pwd1.invalid && pwd1.touched" style="color:red"></span>
+                    
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form3Example4cdg">Repeat your password</label>
+                    <input type="password" id="form3Example4cdg" class="form-control form-control-lg"  [class.is-invalid]="pwd2 && pwd2.invalid && pwd2.dirty"[class.is-valid]= "pwd2 && pwd2.valid"formControlName="rpassword"  />
+                    <span  *ngIf="pwd2 && pwd2.invalid && pwd2.touched" style="color:red"></span>
+                  </div>
+  
+                  <div class="form-check d-flex justify-content-center mb-5">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
+                    <label class="form-check-label" for="form2Example3g">
+                      I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                    </label>
+                  </div>
+  
+                  <div class="d-flex justify-content-center">
+                    <button
+                      class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" [disabled]="login2.invalid" type="submit" (click)="register2()" >Register</button>
+                  </div>
+  
+                  <div class="text-center">Already have an account?<a (click)="login()" class="text-info">ClickHere</a></div>
+  
+                </form>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+

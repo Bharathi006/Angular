@@ -1,0 +1,49 @@
+<section class="vh-100" style="background-color: #50fc8f;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+  
+              <h3 class="mb-5">Sign in</h3>
+            <form [formGroup]='login1' (submit)="getData()">
+              <div class="form-outline mb-4">
+                <label class="form-label" for="typeEmailX-2">Email</label>
+                <input type="email" id="typeEmailX-2" formControlName="mail" class="form-control form-control-lg" required/>
+                    <span  *ngIf="vname && vname.invalid && vname.touched" style="color:red">
+                      <small style="font-size: 13px;"> Enter Valid Email</small></span>
+              </div>
+  
+              <div class="form-outline mb-4">
+                <label class="form-label" for="typePasswordX-2">Password</label>
+                <input type="password" id="typePasswordX-2" formControlName="password"  class="form-control form-control-lg" required />
+                 <span  *ngIf="vpassword && vpassword.invalid && vpassword.touched" style="color:red">Enter valid password</span>
+              
+              </div>
+              <div class="text-center">ForgotPassword<a (click)="reset()" class="text-info">ClickHere</a></div><br>
+  
+              <!-- Checkbox -->
+              <div class="form-check d-flex justify-content-start mb-4">
+                <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
+                <label class="form-check-label" for="form1Example3"> Remember password </label>
+                
+              </div>
+  
+              <button class="btn btn-primary btn-lg col-7 w-100" [disabled]="login1.invalid" type="submit" (click)="dashboard()" >Login</button>
+              <br>
+              
+              <div>
+                <div class="text-center">Don't have an account? <a (click)="register3()" class="text-info">SignUp</a></div>
+            
+            </div>
+
+            </form>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+

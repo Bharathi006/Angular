@@ -1,0 +1,44 @@
+<section class="vh-100" style="background-color: #508bfc;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+  
+              <h3 class="mb-5">Reset Your Password</h3>
+            <form [formGroup]='login3' (submit)="sample()">
+              
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="typePasswordX-2">Enter New Password</label>
+                    <input type="password" id="typePasswordX-2" formControlName="pwd1" (click)="valid()" (input)="valid1()"  class="form-control form-control-lg" required />
+                     <span  *ngIf="pd1 && pd1.invalid && pd1.touched" style="color:red">Enter valid password</span>
+                  
+                  </div>
+  
+              <div class="form-outline mb-4">
+                <label class="form-label" for="typePasswordX-2"> ReEnter Confirm-Password</label>
+                <input type="password" id="typePasswordX-2" formControlName="pwd2" (click)="valid()" (input)="valid1()" class="form-control form-control-lg" required />
+                 <span  [hidden]="val" style="color:red">Enter valid password</span>
+              
+              </div>
+             
+  
+             <button class="btn btn-primary btn-lg col-7 w-100" [disabled]="val1" type="submit" (click)="pwd()" >Submit</button>
+              <br>
+              
+              <div>
+                <div class="text-center">Remember Password <a (click)="pwd()" class="text-info">SignIn</a></div>
+            
+            </div>
+
+            </form>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
